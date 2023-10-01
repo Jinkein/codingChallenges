@@ -62,35 +62,36 @@ function testFindLongestWord() {
   // Initialize an empty object to track test results
   const testResults = {}
   // Scenario 1: Empty Input
-  const sentence5 = ''
-  const result5 = findLongestWord(sentence5)
-  //   console.log(result5 === '' ? 'Pass' : 'Fail')
-  testResults['Scenario 5: Empty Input'] = result5 === '' ? 'Pass' : 'Fail'
+  const sentence1 = ''
+  const result1 = findLongestWord(sentence1)
+  //   console.log(result1 === '' ? 'Pass' : 'Fail')
+  testResults['Scenario 1: Empty Input'] = result1 === '' ? 'Pass' : 'Fail'
 
   // Scenario 2: Basic Test
-  const sentence1 = 'Hello world.'
-  const result1 = findLongestWord(sentence1)
-  testResults['Scenario 1: Basic Test'] = result1 === 'Hello' ? 'Pass' : 'Fail'
-  // Scenario 3: Multiple Words of the Same Length
-  const sentence2 =
-    'This is a test of words to find the longest word in the sentence.'
+  const sentence2 = 'Hello world.'
   const result2 = findLongestWord(sentence2)
-  //   console.log(result2 === 'sentence' ? 'Pass' : 'Fail')
-  testResults['Scenario 2: Multiple Words of the Same Length'] =
-    result2 === 'sentence' ? 'Pass' : 'Fail'
+  testResults['Scenario 2: Basic Test'] = result2 === 'Hello' ? 'Pass' : 'Fail'
+
+  // Scenario 3: Multiple Words of the Same Length
+  const sentence3 =
+    'This is a test of words to find the longest word in the sentence.'
+  const result3 = findLongestWord(sentence3)
+  //   console.log(result3 === 'sentence' ? 'Pass' : 'Fail')
+  testResults['Scenario 3: Multiple Words of the Same Length'] =
+    result3 === 'sentence' ? 'Pass' : 'Fail'
 
   // Scenario 4: Mixed Cases
-  const sentence3 = 'ThIs IS a MiXeD CaSe sEnTeNcE'
-  const result3 = findLongestWord(sentence3)
-  testResults['Scenario 3: Mixed Cases'] =
-    result3.toLowerCase() === 'sentence' ? 'Pass' : 'Fail'
-
-  // Scenario 5: Special Characters
-  const sentence4 = "Play with code is fun, isn't it?"
+  const sentence4 = 'ThIs IS a MiXeD CaSe sEnTeNcE'
   const result4 = findLongestWord(sentence4)
-  //   console.log(result4 === 'code' ? 'Pass' : 'Fail')
-  testResults['Scenario 4: Special Characters'] =
-    result4 === 'code' ? 'Pass' : 'Fail'
+  testResults['Scenario 4: Mixed Cases'] =
+    result4.toLowerCase() === 'sentence' ? 'Pass' : 'Fail'
+
+  // Scenario 5: Special Characters and Numbers
+  const sentence5 = "Play with code is fun, isn't it?"
+  const result5 = findLongestWord(sentence5)
+  //   console.log(result5 === 'code' ? 'Pass' : 'Fail')
+  testResults['Scenario 5: Special Characters'] =
+    result5 === 'code' ? 'Pass' : 'Fail'
 
   // Scenario 6: Long Sentence
   const sentence6 =
